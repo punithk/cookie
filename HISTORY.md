@@ -1,3 +1,8 @@
+unreleased
+==========
+
+  * Add `Partitioned` support
+  
 0.5.0 / 2022-04-11
 ==================
 
