@@ -150,6 +150,14 @@ the `Secure` attribute is set, otherwise it is not. By default, the `Secure` att
 **note** be careful when setting this to `true`, as compliant clients will not send the cookie back to
 the server in the future if the browser does not have an HTTPS connection.
 
+##### partitioned
+Specifies the `boolean` value for the [`Partitioned` `Set-Cookie` attribute][https://developer.chrome.com/docs/privacy-sandbox/third-party-cookie-phase-out/#partitioned-cookies].
+When thruthy, the `Partitioned` attribute is set, ortherwise it is not. By default the `Partitioned` attribute is not set.
+Partitioned cookies must be set with Secure and Path=/. In addition, it is recommended to use the __Host prefix when setting partitioned cookies to make them bound to the hostname and not the registrable domain.
+
+**note** 
+This standard is still not fully adopted by all browsers https://developer.mozilla.org/en-US/docs/Web/Privacy/Partitioned_cookies
+
 ## Example
 
 The following example uses this module in conjunction with the Node.js core HTTP server
